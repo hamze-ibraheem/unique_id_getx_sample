@@ -5,11 +5,11 @@ class Controller extends GetxController {
 
   void increament() {
     count++;
-    update();
+    update(['Counter']);
   }
 
   void decreament() {
-    count++;
-    update();
+    count--;
+    update(['Counter']);
   }
 }

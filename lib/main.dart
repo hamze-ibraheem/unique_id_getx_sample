@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:unique_id_getx_sample/controller.dart';
@@ -90,6 +88,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             GetBuilder<Controller>(
               id: 'Counter',
+              builder: (controller) {
+                return Text('this value is: ${controller.count}');
+              },
+            ),
+            GetBuilder<Controller>(
               builder: (controller) {
                 return Text('this value is: ${controller.count}');
               },
